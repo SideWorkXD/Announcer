@@ -18,7 +18,7 @@ async function askQuestion(message, question, callback) {
   const questionMessage = await message.reply({ embeds: [questionEmbed] }); // Define questionMessage here
 
   const filter = (response) => response.author.id === message.author.id;
-  const collector = message.channel.createMessageCollector({ filter, time: 60000 });
+  const collector = message.channel.createMessageCollector({ filter, time: 600000 });
 
   collector.on('collect', async (response) => {
     const userResponse = response.content;
@@ -137,7 +137,7 @@ module.exports = {
              
               const buttonCollector = message.channel.createMessageComponentCollector({
                 filter: buttonFilter,
-                time: 60000, 
+                time: 600000, 
               });
               const announcementSentEmbed = new EmbedBuilder()
               .setColor('#00FF00')
