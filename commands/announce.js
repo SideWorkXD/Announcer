@@ -137,7 +137,7 @@ module.exports = {
              
               const buttonCollector = message.channel.createMessageComponentCollector({
                 filter: buttonFilter,
-                time: 600000, 
+                time: 120000, 
               });
               const announcementSentEmbed = new EmbedBuilder()
               .setColor('#00FF00')
